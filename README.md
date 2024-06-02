@@ -1,3 +1,5 @@
+# EDITED BY vBagieta FOR OWN PURPOSES
+
 ![ProtectionStones](/logo.png?raw=true)
 
 [![Maven Central](https://img.shields.io/maven-central/v/dev.espi/protectionstones.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22dev.espi%22%20AND%20a:%22protectionstones%22)
