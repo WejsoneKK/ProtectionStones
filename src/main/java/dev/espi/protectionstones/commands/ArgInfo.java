@@ -154,7 +154,7 @@ public class ArgInfo implements PSCommandArg {
                     break;
             }
         } else {
-            PSL.INFO_USAGE.send(p);
+            PSL.msg(p, ChatColor.RED + "Poprawne użycie: " + PSL.INFO_USAGE.msg());
         }
 
 

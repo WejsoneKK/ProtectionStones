@@ -150,7 +150,7 @@ public class ArgMerge implements PSCommandArg {
             });
 
         } else {
-            PSL.msg(s, PSL.MERGE_HELP.msg());
+            PSL.msg(s, ChatColor.RED + "Poprawne użycie: " + PSL.MERGE_USAGE.msg());
         }
 
         return true;

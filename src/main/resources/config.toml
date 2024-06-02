@@ -12,7 +12,7 @@ region_negative_min_max_updated = true
 # ---------------------------------------------------------------------------------------
 
 # Cooldown between placing protection blocks (in seconds). -1 to disable.
-placing_cooldown = -1
+placing_cooldown = 30
 
 # Set to true to not block server startup for loading the UUID cache.
 # /ps add and /ps remove will not work for offline players until the cache is finished loading.
@@ -30,11 +30,7 @@ ps_view_cooldown = 3
 base_command = "ps"
 
 # Aliases for the command
-aliases = [
-    "pstone",
-    "protectionstone",
-    "protectionstones"
-]
+aliases = []
 
 # Whether or not to drop items on the ground if the inventory is full (ex. during /ps unclaim)
 # If set to false, the event will be prevented from happening, and say that inventory is full

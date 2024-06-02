@@ -5,16 +5,16 @@
 # To use custom player heads, you need the base64 value of the head. On minecraft-heads.com, you will find this value in the Other section under "Value:".
 # To use UUIDs for player heads, go to https://sessionserver.mojang.com/session/minecraft/profile/PUT-UUID-HERE and copy the value from the "value" field not including quotes.
 # When you have the value, you can set the type to "PLAYER_HEAD:value"
-type = "EMERALD_ORE"
+type = "BEDROCK"
 
 # Another way to refer to the protection stone
 # Can be used for /ps give and /ps get
 # Must be one word (no spaces)
-alias = "64"
+alias = "kingdom"
 
 # Description of the protection block type
 # Shows up in /ps get menu
-description = "64 block radius protection zone."
+description = "Królestwo"
 
 # Whether or not to restrict obtaining of the protection stone to only /ps get and /ps give and custom crafting recipes.
 # Other ways to obtain this block (ex. mining) will not work as a protection stone.
@@ -76,11 +76,11 @@ placing_bypasses_wg_passthrough = true
     flags = [
         "pvp deny",
         "tnt deny",
-        "greeting &lEntering &b&l%player%'s &f&lprotected area",
-        "farewell &lLeaving &b&l%player%'s &f&lprotected area",
-        "greeting-action &lEntering &b&l%player%'s &f&lprotected area",
-        "farewell-action &lLeaving &b&l%player%'s &f&lprotected area",
-        "creeper-explosion deny",
+        #"greeting Wkraczas na teren Królestwa Króla %player%",
+        #"farewell Opuszczasz teren Królestwa Króla %player%",
+        #"greeting-action Królestwo %player%",
+        #"farewell-action Opuszczasz teren Królestwa Króla %player%",
+        "creeper-explosion allow",
         "wither-damage deny",
         "ghast-fireball deny",
     ]
@@ -89,17 +89,19 @@ placing_bypasses_wg_passthrough = true
     # If you want to whitelist the groups that can be set as well, use -g (ex. "-g all,members pvp" restricts it to no group flag, and members group)
     # "-g all pvp" - Prevents players setting the group to nonmembers, and being invulnerable to attacks.
     allowed_flags = [
-        "-g all pvp",
-        "greeting",
-        "greeting-title",
-        "greeting-action",
-        "farewell",
-        "farewell-title",
-        "farewell-action",
-        "mob-spawning",
-        "creeper-explosion",
-        "wither-damage",
-        "ghast-fireball",
+        #"-g all pvp",
+        #"-g members pvp allow",
+        #"-g members tnt allow",        
+        #"greeting",
+        #"greeting-title",
+        #"greeting-action",
+        #"farewell",
+        #"farewell-title",
+        #"farewell-action",
+        #"mob-spawning",
+        #"creeper-explosion",
+        #"wither-damage",
+        #"ghast-fireball",
     ]
 
     # Which flags to hide from /ps info
@@ -150,13 +152,13 @@ placing_bypasses_wg_passthrough = true
     # Name given to protection block when obtained with /ps give or /ps get
     # Also affects custom crafted items (see custom_recipe)
     # Leave as '' for no name
-    display_name = "&a&m<---&r&b 64 Radius Protection Block &r&a&m--->"
+    display_name = "&bKrólestwo"
 
     # Lore given to protection block when obtained with /ps give or /ps get
     # Also affects custom crafted items (see custom_recipe)
     # Leave as [] for no lore
     lore = [
-        "&6(⌐■_■)ノ♪ Nobody's going to touch my stuff!",
+        "&fPostaw, aby utworzyć Królestwo.",
     ]
 
     # Whether the item should have an "glow/enchant" effect look when in a player's inventory.
@@ -257,7 +259,7 @@ placing_bypasses_wg_passthrough = true
     # Option to teleport only if player stands still.
     # Can override with permission protectionstones.tp.bypasswait
     no_moving_when_tp_waiting = true
-    tp_waiting_seconds = 0
+    tp_waiting_seconds = 5
 
     # Whether or not to prevent obtaining this block through /ps get.
     # Ignored with protectionstones.admin

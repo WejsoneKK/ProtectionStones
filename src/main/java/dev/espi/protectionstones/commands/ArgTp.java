@@ -63,7 +63,7 @@ public class ArgTp implements PSCommandArg {
             return PSL.msg(p, PSL.NO_PERMISSION_TP.msg());
 
         if (args.length < 2 || args.length > 3)
-            return PSL.msg(p, PSL.TP_HELP.msg());
+            return PSL.msg(p, ChatColor.RED + "Poprawne użycie: " + PSL.TP_USAGE.msg());
 
         if (args.length == 2) { // /ps tp [name/id]
             Bukkit.getScheduler().runTaskAsynchronously(ProtectionStones.getInstance(), () -> {

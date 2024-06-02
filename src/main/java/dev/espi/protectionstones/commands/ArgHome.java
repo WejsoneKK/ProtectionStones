@@ -127,7 +127,7 @@ public class ArgHome implements PSCommandArg {
             return PSL.msg(p, PSL.NO_PERMISSION_HOME.msg());
 
         if (args.length != 2 && args.length != 1)
-            return PSL.msg(p, PSL.HOME_HELP.msg());
+            return PSL.msg(p, ChatColor.RED + "Poprawne użycie: " + PSL.HOME_USAGE.msg());
 
         Bukkit.getScheduler().runTaskAsynchronously(ProtectionStones.getInstance(), () -> {
             PSPlayer psp = PSPlayer.fromPlayer(p);

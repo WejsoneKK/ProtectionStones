@@ -1,0 +1,372 @@
+cooldown: '&cOdczekaj %time% sekund przed ponownym założeniem Królestwa.'
+no_such_command: '&cNie ma takiej komendy! Użyj &b/teren pomoc'
+no_access: '&cNie możesz tego zrobić!'
+no_room_in_inventory: '&cNie masz wystarczająco miejsca w ekwipunku.'
+no_room_dropping_on_floor: '&cNie masz wystarczająco miejsca w ekwipunku. Przedmiot
+  zostanie zrzucony na ziemię.'
+invalid_block: '&cNieprawidłowy blok ochronny.'
+not_enough_money: '&cNie masz wystarczająco pieniędzy! Cena wynosi ^a%price%.'
+paid_money: '&eZapłaciłeś $%price%.'
+invalid_world: '&cNieprawidłowy świat.'
+must_be_player: '&cMusisz być graczem, aby wykonać tę komendę.'
+go_back_page: '&eWróć do poprzedniej strony.'
+go_next_page: '&ePrzejdź do następnej strony.'
+page_does_not_exist: '&cTa strona nie istnieje!'
+help: '&e-----------------------------------------------------'
+help_next: '&fWpisz /teren pomoc %page%, aby przejść do następnej strony!'
+command_requires_player_name: '&cPodaj nazwę gracza!'
+no_permission_toggle: '&cNie ma takiej komendy.'
+no_permission_create: '&cNie masz uprawnień do założenia Królestwa.'
+no_permission_create_specific: '&cNie masz uprawnień do założenia tego Królestwa.'
+no_permission_destroy: '&cNie masz uprawnień do niszczenia bloku Królestwa.'
+no_permission_members: '&cNie masz uprawnień do używania komend dla poddanych.'
+no_permission_owners: '&cNie masz uprawnień do używania komend dla Króli.'
+no_permission_admin: '&cNie ma takiej komendy.'
+no_permission_count: '&cNie ma takiej komendy.'
+no_permission_count_others: '&cNie ma takiej komendy.'
+no_permission_flags: '&cNie ma takiej komendy.'
+no_permission_per_flag: '&cNie masz uprawnień do używania tej flagi.'
+no_permission_rent: '&cNie masz uprawnień do wynajmowania.'
+no_permission_tax: '&cNie ma takiej komendy.'
+no_permission_buysell: '&cNie masz uprawnień do kupowania i sprzedawania regionów.'
+no_permission_unhide: '&cNie masz uprawnień do odblokowywania bloków ochronnych.'
+no_permission_hide: '&cNie masz uprawnień do ukrywania bloków ochronnych.'
+no_permission_info: '&cNie ma takiej komendy.'
+no_permission_priority: '&cNie ma takiej komendy.'
+no_permission_region: '&cNie ma takiej komendy.'
+no_permission_tp: '&cNie możesz tego zrobić.'
+no_permission_home: '&cNie możesz tego zrobić.'
+no_permission_unclaim: '&cNie ma takiej komendy.'
+no_permission_unclaim_remote: '&cNie ma takiej komendy.'
+no_permission_view: '&cNie ma takiej komendy.'
+no_permission_give: '&cNie ma takiej komendy.'
+no_permission_get: '&cNie ma takiej komendy.'
+no_permission_sethome: '&cNie ma takiej komendy.'
+no_permission_list: '&cNie ma takiej komendy.'
+no_permission_list_others: '&cNie możesz tego zrobić.'
+no_permission_name: '&cNie ma takiej komendy.'
+no_permission_setparent: '&cNie ma takiej komendy.'
+no_permission_setparent_others: '&cNie masz uprawnień do dziedziczenia z regionów,
+  których nie posiadasz.'
+no_permission_merge: '&cNie ma takiej komendy.'
+psregion:
+  added_to_region: '&b%player%&e został dodany do Królestwa.'
+  added_to_region_specific: '&b%player%&e został dodany do Królestwa %region%.'
+  removed_from_region: '&b%player%&c został usunięty z Królestwa.'
+  removed_from_region_specific: '&b%player%&c został usunięty z Królestwa %region%.'
+  not_in_region: '&cNie jesteś na terenie żadnego Królestwa!'
+  player_not_found: '&cNie znaleziono gracza.'
+  not_ps_region: '&cTo nie jest region Królestwa.'
+  region_does_not_exist: '&cKrólestwo nie istnieje.'
+  no_regions_owned: '&cNie posiadasz żadnych chronionych regionów w tym świecie!'
+  no_region_permission: '&cNie masz uprawnień do tego w tym regionie.'
+  protected: '&eUtworzyłeś na tym obszarze Królestwo.'
+  no_longer_protected: '&cTwoje Królestwo zostało usunięte.'
+  cant_protect_that: '&cNie możesz tutaj utworzyć Królestwa.'
+  reached_region_limit: '&cNie możesz założyć więcej Królestw. Twój limit: %limit%.'
+  reached_per_block_region_limit: '&cNie możesz mieć więcej regionów tego typu (%limit%).'
+  world_denied_create: '&cNie możesz utworzyć Królestwa w tym świecie.'
+  region_overlap: '&cNie możesz tutaj założyć Królestwa, ponieważ nachodzi ono na
+    inne.'
+  region_too_close: '&cBlok Królestwa musi być co najmniej %num% bloków od krawędzi
+    innych Królestw!'
+  cant_teleport: '&cTwoja teleportacja została zablokowana przez teren Królestwa!'
+  specify_id_instead_of_alias: |-
+    &cZnaleziono wiele Królestw o tej nazwie! Użyj ID Królestwa.
+     &cKrólestwa o tej nazwie: &b%regions%
+  region_not_adjacent: '&fPrzekroczyłeś limit nieprzylegających regionów! Spróbuj
+    umieścić swój blok ochronny bliżej innych regionów, które już posiadasz.'
+  not_overlapping: '&fTe regiony nie nakładają się na siebie!'
+  multi_region_does_not_exist: '&cJeden z tych regionów nie istnieje!'
+  no_region_holes: '&fWykryto niechroniony obszar wewnątrz regionu! To nie jest dozwolone!'
+  delete_region_prevented: '&fRegion nie mógł zostać usunięty, prawdopodobnie dlatego,
+    że tworzy dziurę w istniejącym regionie.'
+  not_owner: '&cNie jesteś Królem tego Królestwa!'
+  cannot_merge_rented_region: '&cNie można połączyć regionów, ponieważ region %region%
+    jest w trakcie wynajmu!'
+  no_permission_region_type: '&cNie masz uprawnień do posiadania tego typu regionu.'
+  hidden: '&fBlok ochronny jest teraz ukryty.'
+  must_be_placed_in_existing_region: '&fTo musi być umieszczone wewnątrz istniejącego
+    regionu!'
+  already_in_location_is_hidden: '&fRegion już istnieje w tej lokalizacji (czy blok
+    ochronny jest ukryty?)'
+  cannot_remove_yourself_last_owner: '&cNie możesz usunąć siebie, ponieważ jesteś
+    jedynym Królem!'
+  cannot_remove_yourself_all_regions: '&cNie możesz usunąć siebie ze wszystkich swoich
+    regionów jednocześnie, ze względów bezpieczeństwa.'
+toggle:
+  help: '&f/teren toggle|on|off'
+  help_desc: Użyj tej komendy, aby włączyć lub wyłączyć umieszczanie bloków ochronnych.
+  toggle_on: '&fUmieszczanie bloków ochronnych włączone.'
+  toggle_off: '&fUmieszczanie bloków ochronnych wyłączone.'
+count:
+  count_help: '&b/teren ilosc &e[gracz]'
+  count_help_desc: '&eSprawdź liczbę swoich lub kogoś Królestw.'
+  count_usage: '&b/teren ilosc [gracz]'
+  personal_region_count: '&eLiczba twoich Królestw w tym świecie: &b%num%'
+  personal_region_count_merged: '&e - W tym każde połączone Królestwo: &b%num%'
+  other_region_count: '&eLiczba Królestw gracza &b%player%&e w tym świecie: &b%num%'
+  other_region_count_merged: '&e - W tym każde połączone Królestwo: &f%num%'
+flag:
+  help: '&f/teren flag [nazwa flagi] [wartość|null|domyślna]'
+  help_desc: Użyj tej komendy, aby ustawić flagę w swoim chronionym regionie.
+  flag_set: '&fFlaga %flag%&f została ustawiona.'
+  flag_not_set: '&fFlaga %flag%&f nie została &fustawiona&f. Sprawdź ponownie wartości.'
+  flag_prevent_exploit: '&fTo zostało wyłączone, aby zapobiec exploitom.'
+  flag_prevent_exploit_hover: '&fWyłączone ze względów bezpieczeństwa.'
+  gui_header: 'Flagi (kliknij, aby zmienić) '
+  gui_hover_set: '&fKliknij, aby ustawić.'
+  gui_hover_set_text: |-
+    &fKliknij, aby zmienić.&f
+    Obecna wartość:
+    %value%
+  hover_change_group: Kliknij, aby ustawić tę flagę tylko dla %group%.
+  hover_change_group_null: '&fMusisz ustawić tę flagę na wartość przed zmianą grupy.'
+rent:
+  help: '&f/teren rent'
+  help_desc: Użyj tej komendy, aby zarządzać wynajmem (kupowanie i sprzedawanie).
+  help_header: 'Pomoc Wynajem '
+  already_renting: '&fRegion jest już wynajmowany! Musisz najpierw zatrzymać wynajem
+    regionu.'
+  not_rented: '&fTen region nie jest wynajmowany.'
+  lease_success: |-
+    &fWarunki wynajmu regionu ustawione:
+    &fCena: &f%price%
+    &fOkres płatności: &f%period%
+  stopped: '&fWynajem zatrzymany.'
+  evicted: '&fEksmitowano najemcę %tenant%.'
+  not_renting: '&fTen region nie jest wynajmowany najemcom.'
+  paid_landlord: '&f%tenant%&f zapłacił &f$%price%&f za wynajem &f%region%&f.'
+  paid_tenant: '&fZapłacono &f$%price%&f do &f%landlord%&f za region &f%region%&f.'
+  renting_landlord: '&f%player%&f teraz wynajmuje region &f%region%&f.'
+  renting_tenant: '&fTeraz wynajmujesz region &f%region%&f za &f%price%&f na &f%period%&f.'
+  not_tenant: '&cNie jesteś najemcą tego regionu!'
+  tenant_stopped_landlord: '&f%player%&f przestał wynajmować region &f%region%&f.
+    Jest teraz dostępny do wynajęcia przez innych.'
+  tenant_stopped_tenant: '&fPrzestałeś wynajmować region %region%.'
+  being_sold: '&fRegion jest na sprzedaż! Najpierw wykonaj /teren sell stop.'
+  evict_no_money_tenant: '&fZostałeś &feksmitowany&f z regionu &f%region%&f, ponieważ
+    nie masz wystarczająco dużo pieniędzy (%price%), aby zapłacić za wynajem.'
+  evict_no_money_landlord: '&f%tenant%&f został &feksmitowany&f z regionu &f%region%&f,
+    ponieważ nie był w stanie zapłacić za wynajem.'
+  cannot_rent_own_region: '&cNie możesz wynajmować swojego własnego regionu!'
+  reached_limit: '&fOsiągnąłeś limit regionów, które możesz wynajmować!'
+  price_too_low: '&fCena wynajmu jest za niska (musi być większa niż %price%).'
+  price_too_high: '&fCena wynajmu jest za wysoka (musi być niższa niż %price%).'
+  period_too_short: '&fOkres wynajmu jest za krótki (musi być dłuższy niż %period%
+    sekund).'
+  period_too_long: '&fOkres wynajmu jest za długi (musi być krótszy niż %period% sekund).'
+  period_invalid: '&cNieprawidłowy format okresu! Przykład: 24h dla raz na dobę.'
+  cannot_break_while_renting: '&cNie możesz zniszczyć regionu, gdy jest wynajmowany.'
+tax:
+  help: '&f/teren tax'
+  help_desc: Użyj tej komendy, aby zarządzać i płacić podatki.
+  help_header: 'Pomoc Podatki '
+  disabled_region: '&fPodatki są wyłączone dla tego regionu.'
+  set_as_autopayer: '&fPodatki dla regionu &f%region%&f będą teraz automatycznie opłacane
+    przez ciebie.'
+  set_no_autopayer: '&fPodatki dla regionu &f%region%&f muszą teraz być opłacane ręcznie.'
+  paid: '&fZapłacono &f$%amount%&f w podatkach za region &f%region%&f.'
+  info_header: 'Informacje o Podatkach (kliknij, aby uzyskać więcej informacji) '
+  join_msg_pending_payments: |-
+    &fMasz &f$%money%&f zaległych płatności podatkowych za twoje regiony!
+    Sprawdź je za pomocą /teren tax info.
+  player_region_info: '&f> &f%region%&f - &f$%money% należne'
+  player_region_info_autopayer: '&f> &f%region%&f - &f$%money% należne&f (płatność
+    automatyczna)'
+  click_to_show_more_info: Kliknij, aby wyświetlić więcej informacji.
+  region_info_header: 'Informacje o Podatkach dla regionu %region% '
+  region_info: |-
+    &fStawka podatkowa: &f$%taxrate% (suma wszystkich połączonych regionów)
+    &fCzas między cyklami podatkowymi: &f%taxperiod%
+    &fCzas na zapłacenie podatków po cyklu: &f%taxpaymentperiod%
+    &fAutomatyczna płatność podatków: &f%taxautopayer%
+    &fZaległe podatki: &f$%taxowed%
+  next_page: '&fDo /teren tax info -p %page% aby przejść do następnej strony!'
+buy:
+  help: '&f/teren buy'
+  help_desc: Kup region, w którym się aktualnie znajdujesz.
+  not_for_sale: '&fTen region nie jest na sprzedaż.'
+  stop_sell: '&fRegion nie jest już na sprzedaż.'
+  sold_buyer: '&fKupiono region &f%region%&f za &f$%price%&f od &f%player%&f.'
+  sold_seller: '&fSprzedano region &f%region%&f za &f$%price%&f do &f%player%&f.'
+sell:
+  help: '&f/teren sell [cena|stop]'
+  help_desc: Sprzedaj region, w którym się aktualnie znajdujesz.
+  rented_out: '&fRegion jest obecnie wynajmowany! Musisz przestać wynajmować go, aby
+    go sprzedać.'
+  for_sale: '&fRegion jest teraz na sprzedaż za &f$%price%&f.'
+visibility:
+  hide_help: '&b/teren ukryj'
+  hide_help_desc: Użyj tej komendy, aby ukryć lub odkryć swój blok ochronny.
+  unhide_help: '&b/teren pokaz'
+  unhide_help_desc: Użyj tej komendy, aby ukryć lub odkryć swój blok ochronny.
+  already_not_hidden: '&cBlok terenu Królestwa jest już widzialny'
+  already_hidden: '&cBlok terenu Królestwa jest już niewidzialny'
+info:
+  help: '&b/teren info &e[czlonkowie/wlasciciele]'
+  help_desc: '&eUżyj tej komendy na terenie Królestwa, aby uzyskać więcej informacji
+    na jego temat.'
+  usage: '&b/info [czlonkowie/wlasciciele]'
+  header: '&e-----------------------------------------------------'
+  type2: '&fTyp: &f%type%'
+  may_be_merged: (Może być połączony z innymi typami)
+  merged2: '&fPołączone Królestwa: &f%merged%'
+  members2: '&ePoddani: &f%members%'
+  no_members: '&f(Brak poddanych)'
+  owners2: '&eKrólowie: &f%owners%'
+  no_owners: '&f(Brak Króli?)'
+  flags2: '&fFlagi: &f%flags%'
+  no_flags: '&f(Brak flag)'
+  region2: '&f%region%'
+  priority2: '&fPriorytet: &f%priority%'
+  parent2: '&fNadrzędny: &f%parentregion%'
+  bounds_xyz: '&eGranice: &f(%minx%X,%miny%Y,%minz%Z) -> (%maxx%X,%maxy%Y,%maxz%Z)'
+  bounds_xz: '&eGranice: &f(%minx%X, %minz%Y) -> (%maxx%X, %maxz%Y)'
+  seller2: '&fSprzedawca: &f%seller%'
+  price2: '&fCena: &f%price%'
+  tenant2: '&fNajemca: &f%tenant%'
+  landlord2: '&fKról: &f%landlord%'
+  rent2: '&fCzynsz: &f%rent%'
+  available_for_sale: '&fRegion dostępny na sprzedaż!'
+  available_for_rent: '&fRegion dostępny do wynajęcia!'
+priority:
+  help: '&f/teren priority [numer|null]'
+  help_desc: Użyj tej komendy, aby ustawić priorytet swojego regionu.
+  info: '&fPriorytet: %priority%'
+  set: '&fPriorytet został ustawiony.'
+  error: '&fBłąd podczas analizy danych wejściowych, sprawdź je ponownie?'
+region:
+  help: '&f/teren region [lista|usuń|odmów] [nazwagracza]'
+  help_desc: Użyj tej komendy, aby znaleźć informacje lub edytować chronione regiony
+    innych graczy (lub twoje własne).
+  not_found_for_player: '&cNie znaleziono regionów dla %player% w tym świecie'
+  list: '&f%player%''s regions in this world: &f%regions%'
+  remove: '&f%player%''s regions have been removed in this world, and they have been
+    removed from regions they co-owned.'
+  disown: '&f%player% has been removed as owner from all regions on this world.'
+  error_search: '&fError while searching for %player%''s regions. Please make sure
+    you have entered the correct name.'
+tp:
+  help: '&b/teren tp &e[id/gracz]'
+  help_desc: '&eTeleportuje cię do Królestwa.'
+  usage: '&b/teren tp [id/gracz]'
+  number_above_zero: '&cWprowadź liczbę większą niż 0.'
+  valid_number: '&cWprowadź prawidłową liczbę.'
+  only_has_regions: '&f%player% ma tylko %num% Królestw w tym świecie!'
+  tping: '&ePrzenoszę...'
+  error_name: '&cBłąd podczas teleportowania do Królestwa! (Błąd parsowania
+    nazwy regionu WG)'
+  error_tp: '&cBłąd w znajdowaniu Królestwa do teleportacji!'
+  in_seconds: '&eTeleportowanie za &b%seconds%&e sekund.'
+  cancelled_moved: '&cTeleportacja anulowana. Poruszyłeś się!'
+home:
+  help: '&b/teren spawn &e<nazwa>'
+  help_desc: '&eTeleportuje cię do ustawionego spawnu Królestwa.'
+  usage: '&b/teren spawn <nazwa>'
+  header: Miejsca spawnów (Kliknij, aby się teleportować)
+  click_to_tp: Kliknij, aby się teleportować!
+  next_page: '&fWykonaj /teren spawn -p %page% aby przejść do następnej strony!'
+unclaim:
+  help: '&b/teren usunkrolestwo'
+  help_desc: '&eUżyj tej komendy, aby podnieść umieszczony blok Królestwa tym samym
+    usuwając Królestwo.'
+  header: 'Odmów (Kliknij, aby odmówić) '
+view:
+  help: '&b/teren granica'
+  help_desc: '&eUżyj tej komendy, aby zobaczyć granice terenu Królestwa.'
+  cooldown: '&cPoczekaj chwilę przed ponownym pokazaniem granicy.'
+  generating: '&ePokazywanie granicy terenu Królestwa.'
+  generate_done: '&fGotowe! Granica zniknie po 30 sekundach!'
+  removing: |-
+    &fUsuwanie granicy...
+    &fJeśli wciąż widzisz widmo bloków, zrestartuj grę!
+admin:
+  help: '&f/teren admin'
+  help_desc: Wykonaj /teren admin help, aby uzyskać więcej informacji.
+  cleanup_header: |-
+    &fSprzątanie %arg% %days% dni
+    ================
+  cleanup_footer: |-
+    &f================
+    Ukończono %arg% czyszczenie.
+  hide_toggled: '&fWszystkie kamienie ochronne zostały %message% w tym świecie.'
+  last_logon: '&f%player% ostatnio grał %days% dni temu.'
+  is_banned: '&f%player% jest zbanowany.'
+  error_parsing: '&fBłąd parsowania dni, czy na pewno jest to liczba?'
+  console_world: '&fProszę określić świat jako ostatni parametr.'
+  lastlogons_header: |-
+    &f%days% dni Plus:
+    ================
+  lastlogons_line: '&f%player% %time% dni'
+  lastlogons_footer: |-
+    &f================
+    %count% Pokazano ogółem Graczy
+    %checked% Pokazano ogółem Sprawdzonych Graczy
+reload:
+  help: '&f/teren reload'
+  help_desc: Ponowne załadowanie ustawień z konfiguracji.
+  start: '&fPonowne ładowanie konfiguracji...'
+  complete: '&fUkończono ponowne ładowanie konfiguracji!'
+addremove:
+  help: '&b/teren &e<dodaj/usun> <gracz>'
+  help_desc: '&eUżyj tej komendy, aby dodać lub usunąć poddanego twojego Królestwa.'
+  owner_help: '&b/teren &e<dodajwlasciciela/usunwlasciciela> <gracz>'
+  owner_help_desc: '&eUżyj tej komendy, aby dodać lub usunąć Króla z Królestwa.'
+  player_reached_limit: '&cTen gracz osiągnął limit Królestw.'
+  player_needs_to_be_online: '&cGracz musi być online, aby go dodać.'
+get:
+  help: '&f/teren get [blok]'
+  help_desc: Użyj tej komendy, aby uzyskać lub zakupić kamień ochronny.
+  gotten: '&fAdded protection block to inventory!'
+  no_permission_block: '&fYou don''t have permission to get this block.'
+  header: 'Protect Blocks (click to get) '
+  gui_block: '&f> &f%alias% &f- %description% (&f$%price%&f)'
+  gui_hover: Click to buy a %alias%!
+give:
+  help: '&f/teren give [blok] [gracz] [ilość (opcjonalnie)]'
+  help_desc: Użyj tej komendy, aby dać graczowi blok ochrony.
+  given: '&fPodano &f%block%&f do &f%player%&f.'
+  no_inventory_room: '&fGracz nie ma wystarczająco miejsca w ekwipunku.'
+sethome:
+  help: '&b/teren ustawspawn'
+  help_desc: '&eUżyj tej komendy, aby ustawić spawn Królestwa.'
+  set: '&eSpawn dla &b%psid%&e został ustawiony na twojej lokalizacji.'
+list:
+  help: '&b/teren lista'
+  help_desc: '&eUżyj tej komendy, aby wyświetlić listę Królestw.'
+  usage: '&b/teren lista'
+  header: '&bKrólestwa %player%: '
+  owner: '&eKról:&f'
+  member: '&ePoddany:&f'
+  no_regions: '&cNie należysz do żadnego Królestwa!'
+  no_regions_player: '&f%player% &cNie posiada i nie jest poddanym żadnego Królestwa.'
+name:
+  help: '&b/teren nazwa &e[nazwa]'
+  help_desc: '&eUżyj tej komendy, aby nadać swojemu Królestwie nazwę. Aby usunąć,
+    wprowadź pusty argument'
+  removed: '&cUsunięto nazwę dla Królestwa &b%id%.'
+  set_name: '&eUstawiono nazwę &b%id% na &e%name%&f.'
+  taken: '&cNazwa Królestwa &b%name%&c jest już zajęta!.'
+  usage: '&b/ps name'
+setparent:
+  help: '&f/teren setparent [region|brak]'
+  help_desc: Użyj tej komendy, aby pozwolić temu regionowi dziedziczyć właściwości
+    od innego regionu (króli, poddanych, flagi, itp.).
+  success: '&fPomyślnie ustawiono rodzica dla &f%id%&f na &f%parent%&f.'
+  success_remove: '&fPomyślnie usunięto rodzica dla &f%id%&f.'
+  circular_inheritance: '&fWykryto cyrkularne dziedziczenie (rodzic już dziedziczy
+    od tego regionu?). Rodzic nie został ustawiony.'
+merge:
+  help: '&b/teren polacz'
+  help_desc: '&eUżyj tej komendy, aby połąćzyć tereny Królestw.'
+  usage: '&b/teren polacz'
+  disabled: '&cŁączenie regionów jest wyłączone w konfiguracji!'
+  merged: '&ePomyślnie połączono Królestwa!'
+  header: '&bPołącz Królestwo [%region%] z:'
+  warning: '&cTo usunie wszystkie ustawienia Królestwa!'
+  not_allowed: '&cNie masz uprawnień do połączenia tego typu regionu ochrony.'
+  into: '&cTereny Królestw nakładają się. Czy chcesz je połączyć?'
+  no_region: '&cNie ma żadnych nakładających się Królestw do połączenia.'
+  click_to_merge: '&eKliknij, aby połączyć z &b%region%!'
+  auto_merged: '&eKrólestwo automatycznie połączony z &f%region%&f.'

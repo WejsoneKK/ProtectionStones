@@ -269,6 +269,7 @@ public enum PSL {
     // ps tp
     TP_HELP("tp.help", ChatColor.AQUA + "> " + ChatColor.GRAY + "/ps tp [id/player] [num (optional)]"),
     TP_HELP_DESC("tp.help_desc", "Teleports you to one of a given player's regions."),
+    TP_USAGE("tp.usage", ChatColor.AQUA + "/tp"),
     NUMBER_ABOVE_ZERO("tp.number_above_zero", ChatColor.RED + "Please enter a number above 0."),
     TP_VALID_NUMBER("tp.valid_number", ChatColor.RED + "Please enter a valid number."),
     ONLY_HAS_REGIONS("tp.only_has_regions", ChatColor.RED + "%player% only has %num% protected regions in this world!"),
@@ -281,6 +282,7 @@ public enum PSL {
     // ps home
     HOME_HELP("home.help", ChatColor.AQUA + "> " + ChatColor.GRAY + "/ps home [name/id]"),
     HOME_HELP_DESC("home.help_desc", "Teleports you to one of your protected regions."),
+    HOME_USAGE("home.usage", ChatColor.AQUA + "/ps home"),
     HOME_HEADER("home.header", ChatColor.DARK_GRAY + "" + ChatColor.STRIKETHROUGH + "=====" + ChatColor.RESET + " Homes (click to teleport) " + ChatColor.DARK_GRAY + ChatColor.STRIKETHROUGH + "====="),
     HOME_CLICK_TO_TP("home.click_to_tp", "Click to teleport!"),
     HOME_NEXT("home.next_page", ChatColor.GRAY + "Do /ps home -p %page% to go to the next page!"),
@@ -359,6 +361,7 @@ public enum PSL {
     // ps name
     NAME_HELP("name.help", ChatColor.AQUA + "> " + ChatColor.GRAY + "/ps name [name|none]"),
     NAME_HELP_DESC("name.help_desc", "Use this command to give a nickname to your region, to make identifying your region easier."),
+    NAME_USAGE("name.usage", ChatColor.AQUA + "/ps name"),
     NAME_REMOVED("name.removed", ChatColor.GRAY + "Removed the name for %id%."),
     NAME_SET_NAME("name.set_name", ChatColor.GRAY + "Set the name of %id% to " + ChatColor.AQUA + "%name%" + ChatColor.GRAY + "."),
     NAME_TAKEN("name.taken", ChatColor.GRAY + "The region name " + ChatColor.AQUA + "%name%" + ChatColor.GRAY + " has already been taken! Try another one."),
@@ -373,6 +376,7 @@ public enum PSL {
     // ps merge
     MERGE_HELP("merge.help", ChatColor.AQUA + "> " + ChatColor.GRAY + "/ps merge"),
     MERGE_HELP_DESC("merge.help_desc", "Use this command to merge the region you are in with other overlapping regions."),
+    MERGE_USAGE("merge.usage", ChatColor.AQUA + "/merge"),
     MERGE_DISABLED("merge.disabled", "Merging regions is disabled in the config!"),
     MERGE_MERGED("merge.merged", ChatColor.AQUA + "Regions were successfully merged!"),
     MERGE_HEADER("merge.header", ChatColor.DARK_GRAY + "" + ChatColor.STRIKETHROUGH + "=====" + ChatColor.RESET + " Merge %region% (click to merge) " + ChatColor.DARK_GRAY + ChatColor.STRIKETHROUGH + "====="),

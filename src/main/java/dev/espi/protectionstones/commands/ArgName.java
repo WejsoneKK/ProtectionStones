@@ -20,6 +20,8 @@ import dev.espi.protectionstones.PSL;
 import dev.espi.protectionstones.PSRegion;
 import dev.espi.protectionstones.ProtectionStones;
 import dev.espi.protectionstones.utils.WGUtils;
+import net.md_5.bungee.api.ChatColor;
+
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -66,7 +68,7 @@ public class ArgName implements PSCommandArg {
             return true;
         }
         if (args.length < 2) {
-            PSL.msg(s, PSL.NAME_HELP.msg());
+            PSL.msg(s, ChatColor.RED + "Poprawne użycie: " + PSL.NAME_USAGE.msg());
             return true;
         }
 
