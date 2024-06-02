@@ -74,7 +74,7 @@ public class ArgList implements PSCommandArg {
                 List<PSRegion> regions = PSPlayer.fromUUID(uuid).getPSRegionsCrossWorld(psp.getPlayer().getWorld(), true);
                 display(s, regions, uuid, false);
             } else {
-                PSL.msg(s, PSL.LIST_HELP.msg());
+                PSL.msg(s, ChatColor.RED + "Poprawne użycie: " + PSL.LIST_USAGE.msg());
             }
         });
         return true;
@@ -98,16 +98,16 @@ public class ArgList implements PSCommandArg {
         for (PSRegion r : regions) {
             if (r.isOwner(pUUID)) {
                 if (r.getName() == null) {
-                    ownerOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getId());
+                    ownerOf.add(ChatColor.AQUA + " - " + ChatColor.AQUA + r.getId());
                 } else {
-                    ownerOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getName() + " (" + r.getId() + ")");
+                    ownerOf.add(ChatColor.AQUA + " - " + ChatColor.AQUA + r.getName() + " (" + r.getId() + ")");
                 }
             }
             if (r.isMember(pUUID)) {
                 if (r.getName() == null) {
-                    memberOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getId());
+                    memberOf.add(ChatColor.AQUA + " - " + ChatColor.AQUA + r.getId());
                 } else {
-                    memberOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getName() + " (" + r.getId() + ")");
+                    memberOf.add(ChatColor.AQUA + " - " + ChatColor.AQUA + r.getName() + " (" + r.getId() + ")");
                 }
             }
         }
@@ -121,16 +121,21 @@ public class ArgList implements PSCommandArg {
             return;
         }
 
+        PSL.msg(s, ChatColor.YELLOW + "-----------------------------------------------------");
         PSL.msg(s, PSL.LIST_HEADER.msg().replace("%player%", UUIDCache.getNameFromUUID(pUUID)));
 
         if (!ownerOf.isEmpty()) {
+            PSL.msg(s, " ");
             PSL.msg(s, PSL.LIST_OWNER.msg());
             for (String str : ownerOf) s.sendMessage(str);
         }
         if (!memberOf.isEmpty()) {
+            PSL.msg(s, " ");
             PSL.msg(s, PSL.LIST_MEMBER.msg());
             for (String str : memberOf) s.sendMessage(str);
         }
+
+        PSL.msg(s, ChatColor.YELLOW + "-----------------------------------------------------");
     }
 
 }

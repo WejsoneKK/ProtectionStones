@@ -20,6 +20,8 @@ import dev.espi.protectionstones.PSL;
 import dev.espi.protectionstones.PSPlayer;
 import dev.espi.protectionstones.ProtectionStones;
 import dev.espi.protectionstones.utils.UUIDCache;
+import net.md_5.bungee.api.ChatColor;
+
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
@@ -46,7 +48,7 @@ public class ArgCount implements PSCommandArg {
 
     @Override
     public List<String> getNames() {
-        return Collections.singletonList("count");
+        return Collections.singletonList("ilosc");
     }
 
     @Override
@@ -106,7 +108,7 @@ public class ArgCount implements PSCommandArg {
                             .replace("%num%", "" + count[1]));
                 }
             } else {
-                PSL.msg(p, PSL.COUNT_HELP.msg());
+                PSL.msg(p, ChatColor.RED + "Poprawne użycie: " + PSL.COUNT_USAGE.msg());
             }
         });
         return true;

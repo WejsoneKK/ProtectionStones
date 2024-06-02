@@ -128,6 +128,7 @@ public enum PSL {
     // ps count
     COUNT_HELP("count.count_help", ChatColor.AQUA + "> " + ChatColor.GRAY + "/ps count [player (optional)]"),
     COUNT_HELP_DESC("count.count_help_desc", "Count the number of regions you own or another player."),
+    COUNT_USAGE("count.count_usage", ChatColor.AQUA + "/count [player]"),
     PERSONAL_REGION_COUNT("count.personal_region_count", ChatColor.GRAY + "Your region count in this world: " + ChatColor.AQUA + "%num%"),
     PERSONAL_REGION_COUNT_MERGED("count.personal_region_count_merged", ChatColor.GRAY + "- Including each merged region: " + ChatColor.AQUA + "%num%"),
     OTHER_REGION_COUNT("count.other_region_count", ChatColor.GRAY + "%player%'s region count in this world: " + ChatColor.AQUA + "%num%"),
@@ -221,6 +222,7 @@ public enum PSL {
     // ps info
     INFO_HELP("info.help", ChatColor.AQUA + "> " + ChatColor.GRAY + "/ps info members|owners|flags"),
     INFO_HELP_DESC("info.help_desc", "Use this command inside a ps region to see more information about it."),
+    INFO_USAGE("info.usage", ChatColor.AQUA + "/info"),
     INFO_HEADER("info.header", ChatColor.DARK_GRAY + "" + ChatColor.STRIKETHROUGH + "=====" + ChatColor.RESET + " PS Info " + ChatColor.DARK_GRAY + ChatColor.STRIKETHROUGH + "====="),
     INFO_TYPE2("info.type2", "&9Type: &7%type%", "%type%"),
     INFO_MAY_BE_MERGED("info.may_be_merged", "(may be merged with other types)"),
@@ -347,6 +349,7 @@ public enum PSL {
     // ps list
     LIST_HELP("list.help", ChatColor.AQUA + "> " + ChatColor.GRAY + "/ps list [player (optional)]"),
     LIST_HELP_DESC("list.help_desc", "Use this command to list the regions you, or another player owns."),
+    LIST_USAGE("list.usage", ChatColor.AQUA + "/lista"),
     LIST_HEADER("list.header", ChatColor.DARK_GRAY + "" + ChatColor.STRIKETHROUGH + "=====" + ChatColor.RESET + " %player%'s Regions " + ChatColor.DARK_GRAY + ChatColor.STRIKETHROUGH + "====="),
     LIST_OWNER("list.owner", ChatColor.GRAY + "Owner of:"),
     LIST_MEMBER("list.member", ChatColor.GRAY + "Member of:"),

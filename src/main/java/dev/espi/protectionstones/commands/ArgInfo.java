@@ -127,6 +127,8 @@ public class ArgInfo implements PSCommandArg {
                 );
             }
 
+            PSL.msg(p, ChatColor.YELLOW + "-----------------------------------------------------");
+
         } else if (args.length == 2) { // get specific information on current region
 
             switch (args[1].toLowerCase()) {
@@ -148,14 +150,13 @@ public class ArgInfo implements PSCommandArg {
                         displayFlags(p, r);
                     break;
                 default:
-                    PSL.INFO_HELP.send(p);
+                    PSL.msg(p, ChatColor.RED + "Poprawne użycie: " + PSL.INFO_USAGE.msg());
                     break;
             }
         } else {
-            PSL.INFO_HELP.send(p);
+            PSL.INFO_USAGE.send(p);
         }
 
-        PSL.msg(p, ChatColor.YELLOW + "-----------------------------------------------------");
 
         return true;
     }

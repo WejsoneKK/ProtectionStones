@@ -56,7 +56,7 @@ public class ArgHelp implements PSCommandArg {
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.ADDREMOVE_OWNER_HELP.msg(), PSL.ADDREMOVE_OWNER_HELP_DESC.msg(), base), "protectionstones.owners"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.GET_HELP.msg(), PSL.GET_HELP_DESC.msg(), base + "get"), "protectionstones.get"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.GIVE_HELP.msg(), PSL.GIVE_HELP_DESC.msg(), base + "give"), "protectionstones.give"));
-        helpMenu.add(new HelpEntry(sendWithPerm(PSL.COUNT_HELP.msg(), PSL.COUNT_HELP_DESC.msg(), base + "count"), "protectionstones.count", "protectionstones.count.others"));
+        helpMenu.add(new HelpEntry(sendWithPerm(PSL.COUNT_HELP.msg(), PSL.COUNT_HELP_DESC.msg(), base + "ilosc"), "protectionstones.count", "protectionstones.count.others"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.LIST_HELP.msg(), PSL.LIST_HELP_DESC.msg(), base + "lista"), "protectionstones.list", "protectionstones.list.others"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.NAME_HELP.msg(), PSL.NAME_HELP_DESC.msg(), base + "nazwa"), "protectionstones.name"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.MERGE_HELP.msg(), PSL.MERGE_HELP_DESC.msg(), base + "polacz"), "protectionstones.merge"));
@@ -66,7 +66,7 @@ public class ArgHelp implements PSCommandArg {
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.TAX_HELP.msg(), PSL.TAX_HELP_DESC.msg(), base + "tax"), "protectionstones.tax"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.BUY_HELP.msg(), PSL.BUY_HELP_DESC.msg(), base + "buy"), "protectionstones.buysell"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.SELL_HELP.msg(), PSL.SELL_HELP_DESC.msg(), base + "sell"), "protectionstones.buysell"));
-        helpMenu.add(new HelpEntry(sendWithPerm(PSL.HOME_HELP.msg(), PSL.HOME_HELP_DESC.msg(), base + "home"), "protectionstones.home"));
+        helpMenu.add(new HelpEntry(sendWithPerm(PSL.HOME_HELP.msg(), PSL.HOME_HELP_DESC.msg(), base + "spawn"), "protectionstones.home"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.SETHOME_HELP.msg(), PSL.SETHOME_HELP_DESC.msg(), base + "ustawspawn"), "protectionstones.sethome"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.TP_HELP.msg(), PSL.TP_HELP_DESC.msg(), base + "tp"), "protectionstones.tp"));
         helpMenu.add(new HelpEntry(sendWithPerm(PSL.VISIBILITY_HIDE_HELP.msg(), PSL.VISIBILITY_HIDE_HELP_DESC.msg(), base + "ukryj"), "protectionstones.hide"));
@@ -111,8 +111,8 @@ public class ArgHelp implements PSCommandArg {
 
         List<TextComponent> entries = new ArrayList<>();
 
-        TextComponent sampleText = new TextComponent(ChatColor.YELLOW + "                         Królestwa - Lista komend\n ");
-        entries.add(sampleText);
+        TextComponent textBefore = new TextComponent(ChatColor.YELLOW + "                         Królestwa - Lista komend\n ");
+        entries.add(textBefore);
 
         for (HelpEntry he : helpMenu) {
             // ignore blank lines
@@ -129,8 +129,8 @@ public class ArgHelp implements PSCommandArg {
             }
         }
 
-        TextComponent sampleTextAfter = new TextComponent(ChatColor.AQUA + "\n<>" + ChatColor.YELLOW + " - Argument wymagany" + ChatColor.AQUA + "\n[]" + ChatColor.YELLOW + " - Argument opcjonalny" + ChatColor.YELLOW + "\n-----------------------------------------------------");
-        entries.add(sampleTextAfter);
+        TextComponent textAfter = new TextComponent(ChatColor.AQUA + "\n<>" + ChatColor.YELLOW + " - Argument wymagany" + ChatColor.AQUA + "\n[]" + ChatColor.YELLOW + " - Argument opcjonalny" + ChatColor.AQUA + ChatColor.YELLOW + "\n-----------------------------------------------------");
+        entries.add(textAfter);
 
         TextGUI.displayGUI(p, PSL.HELP.msg(), "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " pomoc %page%", page, GUI_SIZE, entries, false);
 
