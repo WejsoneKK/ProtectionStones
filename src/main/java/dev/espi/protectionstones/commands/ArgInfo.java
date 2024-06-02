@@ -80,26 +80,27 @@ public class ArgInfo implements PSCommandArg {
             StringBuilder sb = new StringBuilder();
 
             if (r.getName() == null) {
-                PSL.INFO_REGION2.append(sb, r.getId());
+                PSL.INFO_REGION2.append(sb, ChatColor.AQUA + "Królestwo: ID " + r.getId());
             } else {
-                PSL.INFO_REGION2.append(sb, r.getName() + " (" + r.getId() + ")");
+                PSL.INFO_REGION2.append(sb, ChatColor.AQUA + "Królestwo: " + r.getName() + " [ID: " + r.getId() + "]");
             }
 
-            if (!PSL.INFO_PRIORITY2.isEmpty()) {
-                sb.append(", ").append(PSL.INFO_PRIORITY2.format(r.getWGRegion().getPriority()));
-            }
+            //if (!PSL.INFO_PRIORITY2.isEmpty()) {
+            //    sb.append(", ").append(PSL.INFO_PRIORITY2.format(r.getWGRegion().getPriority()));
+            //}
             PSL.msg(p, sb.toString());
+            PSL.msg(p, ChatColor.YELLOW + " ");
 
             // type: %type%
-            if (r instanceof PSGroupRegion) {
-                PSL.INFO_TYPE2.send(p, r.getTypeOptions().alias + " " + PSL.INFO_MAY_BE_MERGED.msg());
-                displayMerged(p, (PSGroupRegion) r);
-            } else {
-                PSL.INFO_TYPE2.send(p, r.getTypeOptions().alias);
-            }
+            //if (r instanceof PSGroupRegion) {
+            //    PSL.INFO_TYPE2.send(p, r.getTypeOptions().alias + " " + PSL.INFO_MAY_BE_MERGED.msg());
+            //    displayMerged(p, (PSGroupRegion) r);
+            //} else {
+            //    PSL.INFO_TYPE2.send(p, r.getTypeOptions().alias);
+            //}
 
             displayEconomy(p, r);
-            displayFlags(p, r);
+            //displayFlags(p, r);
             displayOwners(p, r.getWGRegion());
             displayMembers(p, r.getWGRegion());
 
@@ -129,13 +130,13 @@ public class ArgInfo implements PSCommandArg {
         } else if (args.length == 2) { // get specific information on current region
 
             switch (args[1].toLowerCase()) {
-                case "members":
+                case "czlonkowie":
                     if (!p.hasPermission("protectionstones.members"))
                         return PSL.NO_PERMISSION_MEMBERS.send(p);
 
                     displayMembers(p, r.getWGRegion());
                     break;
-                case "owners":
+                case "wlasciciele":
                     if (!p.hasPermission("protectionstones.owners"))
                         return PSL.NO_PERMISSION_OWNERS.send(p);
 
@@ -153,6 +154,9 @@ public class ArgInfo implements PSCommandArg {
         } else {
             PSL.INFO_HELP.send(p);
         }
+
+        PSL.msg(p, ChatColor.YELLOW + "-----------------------------------------------------");
+
         return true;
     }
 

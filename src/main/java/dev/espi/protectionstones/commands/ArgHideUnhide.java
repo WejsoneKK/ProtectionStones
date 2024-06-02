@@ -29,7 +29,7 @@ public class ArgHideUnhide implements PSCommandArg {
 
     @Override
     public List<String> getNames() {
-        return Arrays.asList("hide", "unhide");
+        return Arrays.asList("ukryj", "pokaz");
     }
 
     @Override
@@ -53,10 +53,10 @@ public class ArgHideUnhide implements PSCommandArg {
         PSRegion r = PSRegion.fromLocationGroup(p.getLocation());
 
         // preliminary checks
-        if (arg[0].equals("unhide") && !p.hasPermission("protectionstones.unhide"))
+        if (arg[0].equals("pokaz") && !p.hasPermission("protectionstones.unhide"))
             return PSL.msg(p, PSL.NO_PERMISSION_UNHIDE.msg());
 
-        if (arg[0].equals("hide") && !p.hasPermission("protectionstones.hide"))
+        if (arg[0].equals("ukryj") && !p.hasPermission("protectionstones.hide"))
             return PSL.msg(p, PSL.NO_PERMISSION_HIDE.msg());
 
         if (r == null)
@@ -66,12 +66,12 @@ public class ArgHideUnhide implements PSCommandArg {
             return PSL.msg(p, PSL.NO_ACCESS.msg());
 
         if (r.isHidden()) {
-            if (arg[0].equals("hide")) {
+            if (arg[0].equals("ukryj")) {
                 return PSL.msg(p, PSL.ALREADY_HIDDEN.msg());
             }
             r.unhide();
         } else {
-            if (arg[0].equals("unhide")) {
+            if (arg[0].equals("pokaz")) {
                 return PSL.msg(p, PSL.ALREADY_NOT_HIDDEN.msg());
             }
             r.hide();

@@ -80,7 +80,7 @@ public class WGUtils {
 
     // Turn WG region name into a location (ex. ps138x35y358z)
     public static PSLocation parsePSRegionToLocation(String regionId) {
-        int psx = Integer.parseInt(regionId.substring(2, regionId.indexOf("x")));
+        int psx = Integer.parseInt(regionId.substring(7, regionId.indexOf("x")));
         int psy = Integer.parseInt(regionId.substring(regionId.indexOf("x") + 1, regionId.indexOf("y")));
         int psz = Integer.parseInt(regionId.substring(regionId.indexOf("y") + 1, regionId.length() - 1));
         return new PSLocation(psx, psy, psz);
@@ -302,7 +302,7 @@ public class WGUtils {
 
     // create PS ids without making the numbers have scientific notation (addressed with long)
     public static String createPSID(double bx, double by, double bz) {
-        return "ps" + (long) bx + "x" + (long) by + "y" + (long) bz + "z";
+        return "kingdom" + (long) bx + "x" + (long) by + "y" + (long) bz + "z";
     }
 
     public static String createPSID(Location l) {

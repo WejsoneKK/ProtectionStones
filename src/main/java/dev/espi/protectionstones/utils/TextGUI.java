@@ -43,20 +43,20 @@ public class TextGUI {
         }
 
         // footer page buttons
-        TextComponent backPage = new TextComponent(ChatColor.AQUA + " <<"), nextPage = new TextComponent(ChatColor.AQUA + ">> ");
+        TextComponent backPage = new TextComponent(ChatColor.WHITE+ "[POPRZEDNIA STRONA]"), nextPage = new TextComponent(ChatColor.WHITE + "[NASTĘPNA STRONA] ");
         backPage.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(PSL.GO_BACK_PAGE.msg()).create()));
         nextPage.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(PSL.GO_NEXT_PAGE.msg()).create()));
         backPage.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, pageCommand.replace("%page%", ""+currentPage)));
         nextPage.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, pageCommand.replace("%page%", currentPage+2+"")));
 
-        TextComponent footer = new TextComponent(ChatColor.DARK_GRAY + "" + ChatColor.STRIKETHROUGH + "=====" + ChatColor.RESET);
+        TextComponent footer = new TextComponent("" + ChatColor.RESET);
         // add back page button if the page isn't 0
         if (currentPage != 0) footer.addExtra(backPage);
         // add page number
         footer.addExtra(new TextComponent(ChatColor.WHITE + " " + (currentPage + 1) + " "));
         // add forward page button if the page isn't last
         if (currentPage * guiSize + guiSize < lines.size()) footer.addExtra(nextPage);
-        footer.addExtra(ChatColor.DARK_GRAY + "" + ChatColor.STRIKETHROUGH + "=====");
+        footer.addExtra(ChatColor.RESET + "");
 
         // display footer only if there are more than one page of entries
         if (lines.size() >= guiSize) s.spigot().sendMessage(footer);

@@ -98,7 +98,7 @@ public class PSCommand extends Command {
     public boolean execute(CommandSender s, String label, String[] args) {
         if (args.length == 0) { // no arguments
             if (s instanceof ConsoleCommandSender) {
-                s.sendMessage(ChatColor.RED + "You can only use /ps reload, /ps admin, /ps give from console.");
+                s.sendMessage(ChatColor.RED + "You can only use /teren reload, /teren admin, /teren give from console.");
             } else {
                 new ArgHelp().executeArgument(s, args, null);
             }
@@ -128,7 +128,7 @@ public class PSCommand extends Command {
 
                     return command.executeArgument(s, nArgs.toArray(new String[0]), flags);
                 } else if (!command.allowNonPlayersToExecute()) {
-                    s.sendMessage(ChatColor.RED + "You can only use /ps reload, /ps admin, /ps give from console.");
+                    s.sendMessage(ChatColor.RED + "You can only use /teren reload, /teren admin, /teren give from console.");
                     return true;
                 }
             }

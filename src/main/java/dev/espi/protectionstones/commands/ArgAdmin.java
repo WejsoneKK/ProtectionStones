@@ -34,27 +34,27 @@ public class ArgAdmin implements PSCommandArg {
 
     // has to be a method, because the base command config option is not available until the plugin is loaded
     public static String getCleanupHelp() {
-        return ChatColor.AQUA + "> " + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
+        return ChatColor.WHITE + "" + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
                 " admin cleanup [remove|preview] [-t typealias (optional)] [days] [world (optional)]";
     }
 
     public static String getFlagHelp() {
-        return ChatColor.AQUA + "> " + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
+        return ChatColor.WHITE + "" + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
                 " admin flag [world] [flagname] [value|null|default]";
     }
 
     public static String getChangeBlockHelp() {
-        return ChatColor.AQUA + "> " + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
+        return ChatColor.WHITE + "" + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
                 " admin changeblock [world] [oldtypealias] [newtypealias]";
     }
 
     public static String getChangeRegionTypeHelp() {
-        return ChatColor.AQUA + "> " + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
+        return ChatColor.WHITE + "" + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
                 " admin changeregiontype [world] [oldtype] [newtype]";
     }
 
     public static String getForceMergeHelp() {
-        return ChatColor.AQUA + "> " + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
+        return ChatColor.WHITE + "" + ChatColor.GRAY + "/" + ProtectionStones.getInstance().getConfigOptions().base_command +
                 " admin forcemerge [world]";
     }
 
@@ -94,10 +94,10 @@ public class ArgAdmin implements PSCommandArg {
             case "help":
                 return ArgAdminHelp.argumentAdminHelp(s, args);
             case "version":
-                s.sendMessage(ChatColor.AQUA + "ProtectionStones: " + ChatColor.GRAY + ProtectionStones.getInstance().getDescription().getVersion());
-                s.sendMessage(ChatColor.AQUA + "Developers: " + ChatColor.GRAY + ProtectionStones.getInstance().getDescription().getAuthors());
-                s.sendMessage(ChatColor.AQUA + "Bukkit:  " + ChatColor.GRAY + Bukkit.getVersion());
-                s.sendMessage(ChatColor.AQUA + "WG: " + ChatColor.GRAY + WorldGuardPlugin.inst().getDescription().getVersion());
+                s.sendMessage(ChatColor.WHITE + "ProtectionStones: " + ChatColor.GRAY + ProtectionStones.getInstance().getDescription().getVersion());
+                s.sendMessage(ChatColor.WHITE + "Developers: " + ChatColor.GRAY + ProtectionStones.getInstance().getDescription().getAuthors());
+                s.sendMessage(ChatColor.WHITE + "Bukkit:  " + ChatColor.GRAY + Bukkit.getVersion());
+                s.sendMessage(ChatColor.WHITE + "WG: " + ChatColor.GRAY + WorldGuardPlugin.inst().getDescription().getVersion());
                 break;
             case "hide":
                 return ArgAdminHide.argumentAdminHide(s, args);

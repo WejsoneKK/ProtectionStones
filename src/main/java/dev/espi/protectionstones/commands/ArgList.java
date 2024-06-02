@@ -33,7 +33,7 @@ import java.util.stream.Collectors;
 public class ArgList implements PSCommandArg {
     @Override
     public List<String> getNames() {
-        return Collections.singletonList("list");
+        return Collections.singletonList("lista");
     }
 
     @Override
@@ -98,16 +98,16 @@ public class ArgList implements PSCommandArg {
         for (PSRegion r : regions) {
             if (r.isOwner(pUUID)) {
                 if (r.getName() == null) {
-                    ownerOf.add(ChatColor.GRAY + "> " + ChatColor.AQUA + r.getId());
+                    ownerOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getId());
                 } else {
-                    ownerOf.add(ChatColor.GRAY + "> " + ChatColor.AQUA + r.getName() + " (" + r.getId() + ")");
+                    ownerOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getName() + " (" + r.getId() + ")");
                 }
             }
             if (r.isMember(pUUID)) {
                 if (r.getName() == null) {
-                    memberOf.add(ChatColor.GRAY + "> " + ChatColor.AQUA + r.getId());
+                    memberOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getId());
                 } else {
-                    memberOf.add(ChatColor.GRAY + "> " + ChatColor.AQUA + r.getName() + " (" + r.getId() + ")");
+                    memberOf.add(ChatColor.WHITE + "- " + ChatColor.WHITE + r.getName() + " (" + r.getId() + ")");
                 }
             }
         }

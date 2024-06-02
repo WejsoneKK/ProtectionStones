@@ -33,7 +33,7 @@ public class ArgView implements PSCommandArg {
 
     @Override
     public List<String> getNames() {
-        return Collections.singletonList("view");
+        return Collections.singletonList("granica");
     }
 
     @Override

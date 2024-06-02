@@ -33,7 +33,7 @@ public class ArgAddRemove implements PSCommandArg {
 
     @Override
     public List<String> getNames() {
-        return Arrays.asList("add", "remove", "addowner", "removeowner");
+        return Arrays.asList("dodaj", "usun", "dodajwlasciciela", "usunwlasciciela");
     }
 
     @Override
@@ -59,9 +59,9 @@ public class ArgAddRemove implements PSCommandArg {
         String operationType = args[0].toLowerCase(); // add, remove, addowner, removeowner
 
         // check permission
-        if ((operationType.equals("add") || operationType.equals("remove")) && !p.hasPermission("protectionstones.members")) {
+        if ((operationType.equals("dodaj") || operationType.equals("usun")) && !p.hasPermission("protectionstones.members")) {
             return PSL.msg(p, PSL.NO_PERMISSION_MEMBERS.msg());
-        } else if ((operationType.equals("addowner") || operationType.equals("removeowner")) && !p.hasPermission("protectionstones.owners")) {
+        } else if ((operationType.equals("dodajwlasciciela") || operationType.equals("usunwlasciciela")) && !p.hasPermission("protectionstones.owners")) {
             return PSL.msg(p, PSL.NO_PERMISSION_OWNERS.msg());
         }
 
@@ -85,7 +85,7 @@ public class ArgAddRemove implements PSCommandArg {
             if (flags.containsKey("-a")) { // add or remove to all regions a player owns
 
                 // don't let players remove themself from all of their regions
-                if (operationType.equals("removeowner") && addPlayerUuid.equals(p.getUniqueId())) {
+                if (operationType.equals("usunwlasciciela") && addPlayerUuid.equals(p.getUniqueId())) {
                     PSL.msg(p, PSL.CANNOT_REMOVE_YOURSELF_FROM_ALL_REGIONS.msg());
                     return;
                 }
@@ -100,7 +100,7 @@ public class ArgAddRemove implements PSCommandArg {
                 } else if (WGUtils.hasNoAccess(r.getWGRegion(), p, WorldGuardPlugin.inst().wrapPlayer(p), false)) {
                     PSL.msg(p, PSL.NO_ACCESS.msg());
                     return;
-                } else if (operationType.equals("removeowner") && addPlayerUuid.equals(p.getUniqueId()) && r.getOwners().size() == 1) {
+                } else if (operationType.equals("usunwlasciciela") && addPlayerUuid.equals(p.getUniqueId()) && r.getOwners().size() == 1) {
                     // don't let users remove themself if they are the last owner of the region
                     PSL.msg(p, PSL.CANNOT_REMOVE_YOURSELF_LAST_OWNER.msg());
                     return;
@@ -110,7 +110,7 @@ public class ArgAddRemove implements PSCommandArg {
             }
 
             // check that the player is not over their limit if they are being set owner
-            if (operationType.equals("addowner")) {
+            if (operationType.equals("dodajwlasciciela")) {
                 if (determinePlayerSurpassedLimit(p, regions, PSPlayer.fromUUID(addPlayerUuid))) {
                     return;
                 }
@@ -119,7 +119,7 @@ public class ArgAddRemove implements PSCommandArg {
             // apply operation to regions
             for (PSRegion r : regions) {
 
-                if (operationType.equals("add") || operationType.equals("addowner")) {
+                if (operationType.equals("dodaj") || operationType.equals("dodajwlasciciela")) {
                     if (flags.containsKey("-a")) {
                         PSL.msg(p, PSL.ADDED_TO_REGION_SPECIFIC.msg()
                                 .replace("%player%", addPlayerName)
@@ -131,8 +131,8 @@ public class ArgAddRemove implements PSCommandArg {
                     // add to WorldGuard profile cache
                     Bukkit.getScheduler().runTaskAsynchronously(ProtectionStones.getInstance(), () -> UUIDCache.storeWGProfile(addPlayerUuid, addPlayerName));
 
-                } else if ((operationType.equals("remove") && r.isMember(addPlayerUuid))
-                        || (operationType.equals("removeowner") && r.isOwner(addPlayerUuid))) {
+                } else if ((operationType.equals("usun") && r.isMember(addPlayerUuid))
+                        || (operationType.equals("usunwlasciciela") && r.isOwner(addPlayerUuid))) {
 
                     if (flags.containsKey("-a")) {
                         PSL.msg(p, PSL.REMOVED_FROM_REGION_SPECIFIC.msg()
@@ -144,10 +144,10 @@ public class ArgAddRemove implements PSCommandArg {
                 }
 
                 switch (operationType) {
-                    case "add" -> r.addMember(addPlayerUuid);
-                    case "remove" -> r.removeMember(addPlayerUuid);
-                    case "addowner" -> r.addOwner(addPlayerUuid);
-                    case "removeowner" -> r.removeOwner(addPlayerUuid);
+                    case "dodaj" -> r.addMember(addPlayerUuid);
+                    case "usun" -> r.removeMember(addPlayerUuid);
+                    case "dodajwlasciciela" -> r.addOwner(addPlayerUuid);
+                    case "usunwlasciciela" -> r.removeOwner(addPlayerUuid);
                 }
             }
         });
@@ -169,8 +169,8 @@ public class ArgAddRemove implements PSCommandArg {
             if (args.length == 2 || (args.length == 3 && args[1].equals("-a"))) {
 
                 switch (args[0].toLowerCase()) {
-                    case "add":
-                    case "addowner":
+                    case "dodaj":
+                    case "dodajwlasciciela":
                         List<String> names = new ArrayList<>();
                         for (Player pAdd : Bukkit.getOnlinePlayers()) {
                             if (p.canSee(pAdd)) { // check if the player is not hidden
@@ -179,12 +179,12 @@ public class ArgAddRemove implements PSCommandArg {
                         }
                         ret.addAll(names);
                         break;
-                    case "remove":
-                    case "removeowner":
+                    case "usun":
+                    case "usunwlasciciela":
                         PSRegion r = PSRegion.fromLocationGroup(p.getLocation());
                         if (r != null) {
                             names = new ArrayList<>();
-                            for (UUID uuid : args[0].equalsIgnoreCase("remove") ? r.getMembers() : r.getOwners()) {
+                            for (UUID uuid : args[0].equalsIgnoreCase("usun") ? r.getMembers() : r.getOwners()) {
                                 names.add(UUIDCache.getNameFromUUID(uuid));
                             }
                             ret.addAll(names);

@@ -37,7 +37,7 @@ public class ArgUnclaim implements PSCommandArg {
 
     @Override
     public List<String> getNames() {
-        return Collections.singletonList("unclaim");
+        return Collections.singletonList("usunkrolestwo");
     }
 
     @Override
@@ -77,7 +77,7 @@ public class ArgUnclaim implements PSCommandArg {
             // list of regions that the player owns
             List<PSRegion> regions = psp.getPSRegionsCrossWorld(psp.getPlayer().getWorld(), false);
 
-            if (args[1].equalsIgnoreCase("list")) {
+            if (args[1].equalsIgnoreCase("lista")) {
                 displayPSRegions(s, regions, args.length == 2 ? 0 : tryParseInt(args[2]) - 1);
             } else {
                 for (PSRegion psr : regions) {
@@ -136,16 +136,16 @@ public class ArgUnclaim implements PSCommandArg {
         for (PSRegion rs : regions) {
             String msg;
             if (rs.getName() == null) {
-                msg = ChatColor.GRAY + "> " + ChatColor.AQUA + rs.getId();
+                msg = ChatColor.WHITE + "- " + ChatColor.WHITE + rs.getId();
             } else {
-                msg = ChatColor.GRAY + "> " + ChatColor.AQUA + rs.getName() + " (" + rs.getId() + ")";
+                msg = ChatColor.GRAY + "- " + ChatColor.WHITE + rs.getName() + " (" + rs.getId() + ")";
             }
-            TextComponent tc = new TextComponent(ChatColor.AQUA + " [-] " + msg);
+            TextComponent tc = new TextComponent(ChatColor.WHITE + " [-] " + msg);
             tc.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("Click to unclaim " + rs.getId()).create()));
-            tc.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " unclaim " + rs.getId()));
+            tc.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " usunkrolestwo " + rs.getId()));
             entries.add(tc);
         }
-        TextGUI.displayGUI(s, PSL.UNCLAIM_HEADER.msg(), "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " unclaim list %page%", page, 17, entries, true);
+        TextGUI.displayGUI(s, PSL.UNCLAIM_HEADER.msg(), "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " usunkrolestwo lista %page%", page, 17, entries, true);
     }
 
     private boolean unclaimBlock(PSRegion r, Player p) {

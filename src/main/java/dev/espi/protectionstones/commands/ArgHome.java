@@ -39,7 +39,7 @@ public class ArgHome implements PSCommandArg {
 
     @Override
     public List<String> getNames() {
-        return Collections.singletonList("home");
+        return Collections.singletonList("spawn");
     }
 
     @Override
@@ -98,21 +98,21 @@ public class ArgHome implements PSCommandArg {
         for (PSRegion r : homes) {
             String msg;
             if (r.getName() == null) {
-                msg = ChatColor.GRAY + "> " + ChatColor.AQUA + r.getId();
+                msg = ChatColor.WHITE + "- " + ChatColor.WHITE + r.getId();
             } else {
-                msg = ChatColor.GRAY + "> " + ChatColor.AQUA + r.getName() + " (" + r.getId() + ")";
+                msg = ChatColor.WHITE + "- " + ChatColor.WHITE + r.getName() + " (" + r.getId() + ")";
             }
             TextComponent tc = new TextComponent(msg);
             tc.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(PSL.HOME_CLICK_TO_TP.msg()).create()));
             if (r.getName() == null) {
-                tc.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " home " + r.getId()));
+                tc.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " spawn " + r.getId()));
             } else {
-                tc.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " home " + r.getName()));
+                tc.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " spawn " + r.getName()));
             }
             entries.add(tc);
         }
 
-        TextGUI.displayGUI(psp.getPlayer(), PSL.HOME_HEADER.msg(), "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " home -p %page%", page, GUI_SIZE, entries, true);
+        TextGUI.displayGUI(psp.getPlayer(), PSL.HOME_HEADER.msg(), "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " spawn -p %page%", page, GUI_SIZE, entries, true);
 
         if (page * GUI_SIZE + GUI_SIZE < entries.size())
             PSL.msg(psp, PSL.HOME_NEXT.msg().replace("%page%", page + 2 + ""));

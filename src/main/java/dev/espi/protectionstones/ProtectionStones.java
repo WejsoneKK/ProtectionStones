@@ -307,7 +307,7 @@ public class ProtectionStones extends JavaPlugin {
      * @return true if the WorldGuard region is a ProtectionStones region, and false if it isn't
      */
     public static boolean isPSRegionFormat(ProtectedRegion r) {
-        return r != null && r.getId().startsWith("ps") && r.getFlag(FlagHandler.PS_BLOCK_MATERIAL) != null;
+        return r != null && r.getId().startsWith("kingdom") && r.getFlag(FlagHandler.PS_BLOCK_MATERIAL) != null;
     }
 
     /**

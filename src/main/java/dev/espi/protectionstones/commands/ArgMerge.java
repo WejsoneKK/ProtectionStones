@@ -37,7 +37,7 @@ import java.util.stream.Collectors;
 public class ArgMerge implements PSCommandArg {
     @Override
     public List<String> getNames() {
-        return Arrays.asList("merge");
+        return Arrays.asList("polacz");
     }
 
     @Override
@@ -58,11 +58,11 @@ public class ArgMerge implements PSCommandArg {
     public static List<TextComponent> getGUI(Player p, PSRegion r) {
         return r.getMergeableRegions(p).stream()
                 .map(psr -> {
-                    TextComponent tc = new TextComponent(ChatColor.AQUA + "> " + ChatColor.WHITE + psr.getId());
+                    TextComponent tc = new TextComponent(ChatColor.AQUA + " - Królestwo" + " [" + psr.getId() + "]");
                     if (psr.getName() != null) tc.addExtra(" (" + psr.getName() + ")"); // name
-                    tc.addExtra(" (" + psr.getTypeOptions().alias + ")"); // region type
+                    //tc.addExtra(" (" + psr.getTypeOptions().alias + ")"); // region type
 
-                    tc.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " merge " + r.getId() + " " + psr.getId()));
+                    tc.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + ProtectionStones.getInstance().getConfigOptions().base_command + " polacz " + r.getId() + " " + psr.getId()));
                     tc.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(PSL.MERGE_CLICK_TO_MERGE.msg().replace("%region%", psr.getId())).create()));
                     return tc;
                 })
@@ -98,8 +98,8 @@ public class ArgMerge implements PSCommandArg {
                 PSL.msg(p, PSL.MERGE_NO_REGIONS.msg());
             } else {
                 p.sendMessage(ChatColor.WHITE + ""); // send empty line
-                PSL.msg(p, PSL.MERGE_HEADER.msg().replace("%region%", r.getId()));
                 PSL.msg(p, PSL.MERGE_WARNING.msg());
+                PSL.msg(p, PSL.MERGE_HEADER.msg().replace("%region%", r.getId()));
                 for (TextComponent tc : components) p.spigot().sendMessage(tc);
                 p.sendMessage(ChatColor.WHITE + ""); // send empty line
             }
@@ -144,7 +144,7 @@ public class ArgMerge implements PSCommandArg {
                 // show menu again if the new region still has overlapping regions
                 Bukkit.getScheduler().runTask(ProtectionStones.getInstance(), () -> {
                     if (!getGUI(p, PSRegion.fromWGRegion(p.getWorld(), rm.getRegion(aRoot.getId()))).isEmpty()) {
-                        Bukkit.dispatchCommand(p, ProtectionStones.getInstance().getConfigOptions().base_command + " merge");
+                        Bukkit.dispatchCommand(p, ProtectionStones.getInstance().getConfigOptions().base_command + " polacz");
                     }
                 });
             });

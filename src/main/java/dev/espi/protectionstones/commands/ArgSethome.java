@@ -34,7 +34,7 @@ public class ArgSethome implements PSCommandArg {
 
     @Override
     public List<String> getNames() {
-        return Collections.singletonList("sethome");
+        return Collections.singletonList("ustawspawn");
     }
 
     @Override

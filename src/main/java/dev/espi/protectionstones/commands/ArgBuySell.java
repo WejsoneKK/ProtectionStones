@@ -35,7 +35,7 @@ import java.util.List;
 public class ArgBuySell implements PSCommandArg {
     @Override
     public List<String> getNames() {
-        return Arrays.asList("buy", "sell");
+        return Arrays.asList("kup", "sprzedaj");
     }
 
     @Override
@@ -62,8 +62,8 @@ public class ArgBuySell implements PSCommandArg {
         }
 
         if (!ProtectionStones.getInstance().isVaultSupportEnabled()) {
-            Bukkit.getLogger().info(ChatColor.RED + "Vault is required, but is not enabled on this server. Contact an administrator.");
-            s.sendMessage(ChatColor.RED + "Vault is required, but is not enabled on this server. Contact an administrator.");
+            Bukkit.getLogger().info(ChatColor.RED + "Ten serwer nie wspiera ekonomi Vault.");
+            s.sendMessage(ChatColor.RED + "Ten serwer nie wspiera ekonomi Vault.");
             return true;
         }
 
@@ -71,7 +71,7 @@ public class ArgBuySell implements PSCommandArg {
         if (r == null)
             return PSL.msg(p, PSL.NOT_IN_REGION.msg());
 
-        if (args[0].equals("buy")) { // buying
+        if (args[0].equals("kup")) { // buying
 
             if (!r.forSale())
                 return PSL.msg(p, PSL.BUY_NOT_FOR_SALE.msg());
@@ -100,7 +100,7 @@ public class ArgBuySell implements PSCommandArg {
 
             r.sell(p.getUniqueId());
 
-        } else if (args[0].equals("sell")) { // selling
+        } else if (args[0].equals("sprzedaj")) { // selling
 
             if (!r.isOwner(p.getUniqueId()))
                 return PSL.msg(p, PSL.NOT_OWNER.msg());

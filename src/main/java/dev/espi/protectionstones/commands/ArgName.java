@@ -31,7 +31,7 @@ import java.util.List;
 public class ArgName implements PSCommandArg {
     @Override
     public List<String> getNames() {
-        return Collections.singletonList("name");
+        return Collections.singletonList("nazwa");
     }
 
     @Override
